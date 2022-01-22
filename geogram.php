@@ -28,6 +28,16 @@
     <form action="" method="GET">
         <input type="text" name="location">
         <button type="submit">Submit</button>
+        <br/>
+
+        <?php
+        if( ! empty($instagram_array)) {
+            foreach($instagram_array['data'] as $image) {
+                echo '<img src="' . $image['images']['low_resolution']['url'] . '" alt=""/>';
+            }
+        }
+        ?>
+
     </form>
 </body>
 </html>
